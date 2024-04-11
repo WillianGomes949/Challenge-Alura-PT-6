@@ -6,8 +6,12 @@
 }
 
 body {
-    max-width: 1136px;
-    margin: 0 auto;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    font-size: 32px;
 }
 
 i {
@@ -20,8 +24,8 @@ a {
 }
 
 a:hover {
-    color: blue;
-    border-bottom: solid 1px blue;
+    color: #2A7AE4;
+    border-bottom: solid 1px 2A7AE4;
     border-radius: 4px;
     padding-bottom: 3px;
 }
@@ -29,6 +33,8 @@ a:hover {
 /* HEADER*/
 
 header {
+    width: 1136px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 32px 0;
@@ -52,15 +58,16 @@ header {
     font-size: 16px;
 }
 
-/* HERO */
+/* SOBRE MIM */
 
 .sobre-mim .hero {
+    width: 1136px;
+    margin: 0 auto;
     display: flex;
     padding: 32px 0;
     align-items: center;
     justify-content: space-between;
 }
-
 
 .sobre-mim .hero .texto .txt {
     font-size: 52px;
@@ -68,7 +75,7 @@ header {
 }
 
 .sobre-mim .hero .texto .txt span {
-    color: blue;
+    color: #2A7AE4;
 }
 
 .sobre-mim .hero .texto p {
@@ -76,11 +83,11 @@ header {
 }
 
 .sobre-mim .hero .imagem img{
-    width: 368px;
-    height: 368px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .sobre-mim .hero .redes {
@@ -91,4 +98,93 @@ header {
 }
 .sobre-mim .hero .redes li {
     align-items: flex-end;
+}
+
+.sobre-mim .sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #EAF2FD;
+    height: 383px;
+    width: auto;
+    
+}
+
+.sobre-mim .sobre-txt {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 1136px;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+/* HOBBIES E SKILLS*/
+
+.hobbies-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0 15px 0;
+    height: 600px;
+}
+
+.hobbies-skills .skills {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 15px 0 15px 0;
+}
+
+.hobbies-skills .skills .item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 176px;
+    height: 174px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    
+}
+
+.hobbies-skills .skills .item i {
+    color: #2A7AE4;
+    margin-top: 70%;
+    font-size: 25px;
+}
+
+.hobbies-skills .skills .item h4 {
+    color: #2A7AE4;
+}
+
+/* FORMAÇÃO ACADEMICA*/
+
+
+.formacao-curso {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAF2FD;
+    gap: 15px;
+    height: 600px;
+}
+
+.formacao-curso .formacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 1136px;
+}
+
+.formacao-curso .formacao .item {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 5px;
 }
