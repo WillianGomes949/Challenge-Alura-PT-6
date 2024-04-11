@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    max-width: 1136px;
+    margin: 0 auto;
+}
+
+i {
+   font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: blue;
+    border-bottom: solid 1px blue;
+    border-radius: 4px;
+    padding-bottom: 3px;
+}
+
+/* HEADER*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+
+.logo h2 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nome {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    font-size: 16px;
+}
+
+/* HERO */
+
+.sobre-mim .hero {
+    display: flex;
+    padding: 32px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.sobre-mim .hero .texto .txt {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.sobre-mim .hero .texto .txt span {
+    color: blue;
+}
+
+.sobre-mim .hero .texto p {
+    font-size: 22px;
+}
+
+.sobre-mim .hero .imagem img{
+    width: 368px;
+    height: 368px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre-mim .hero .redes {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 15px;
+}
+.sobre-mim .hero .redes li {
+    align-items: flex-end;
+}
