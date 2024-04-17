@@ -2,12 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Raleway, sans-serif;
+    font-family: var(--font-family-primary)
 }
 
 body {
     height: 100%;
-    background-color: #f5f5f5;
+    background-color: var(--cor-background);
+    color: var(--cor-principal);
+}
+
+:root {
+    --font-family-primary: Raleway, sans-serif;
+    --cor-background: #f5f5f5;
+    --cor-principal: #464646;
+    --cor-secundaria: #2A7AE4;
+    --cor-secundaria-hover: #195099;
+    --cor-terciaria: #EAF2FD;
+    --cor-branco: #fff;
+    --tamanho-padrao: 80%;
+    --altura-padrao-containers: 500px;
+    /* TABLET */
+    --altura-padrao-tablet: 300px;
+    /* CELULAR */
+    --altura-padrao-celular: 200px;
 }
 
 h2 {
@@ -20,11 +37,11 @@ i {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: var(--cor-principal);
 }
 
 a:hover {
-    color: #2A7AE4;
+    color: var(--cor-secundaria);
     border-bottom: solid 1px 2A7AE4;
     border-radius: 4px;
     padding-bottom: 3px;
@@ -33,11 +50,16 @@ a:hover {
 /* HEADER*/
 
 header {
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: var(--tamanho-padrao);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
     padding: 32px 0;
+}
+
+.menu .ul_celular {
+    display: none;
 }
 
 .logo h2 {
@@ -61,10 +83,10 @@ header {
 /* SOBRE MIM */
 
 .sobre-mim .hero {
-    max-width: 80%;
+    max-width: var(--tamanho-padrao);
+    min-height: var(--altura-padrao-containers);
     margin: 0 auto;
     display: flex;
-    padding: 32px 0;
     align-items: center;
     justify-content: space-between;
 }
@@ -75,7 +97,7 @@ header {
 }
 
 .sobre-mim .hero .texto .txt span {
-    color: #2A7AE4;
+    color: var(--cor-secundaria);
 }
 
 .sobre-mim .hero .texto p {
@@ -105,7 +127,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #EAF2FD;
+    background-color: var(--cor-terciaria);
     height: 383px;
     width: auto;
     
@@ -114,8 +136,10 @@ header {
 .sobre-mim .sobre-txt {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: justify;
-    max-width: 80%;
+    max-width: var(--tamanho-padrao);
+    height: var(--altura-padrao-containers);
     margin: 0 auto;
     gap: 15px;
 }
@@ -123,23 +147,24 @@ header {
 /* HOBBIES E SKILLS*/
 
 .hobbies-skills {
+    width: var(--tamanho-padrao) auto;
+    height: var(--altura-padrao-containers) auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 0 15px 0;
-    min-height: 600px;
+    margin: 40px 0 40px 0;
+    gap: 20px;
 }
 
 .hobbies-skills .skills {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 80%;
+    max-width: var(--tamanho-padrao);
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin: 15px 0 15px 0;
 }
 
 .hobbies-skills .skills .item {
@@ -148,20 +173,20 @@ header {
     align-items: flex-start;
     width: 146px;
     height: 144px;
-    background-color: #fff;
+    background-color: var(--cor-branco);
     border-radius: 10px;
-    padding: 5px;
+    padding: 15px;
     
 }
 
 .hobbies-skills .skills .item i {
-    color: #2A7AE4;
+    color: var(--cor-secundaria);
     margin-top: 70%;
     font-size: 25px;
 }
 
 .hobbies-skills .skills .item h4 {
-    color: #2A7AE4;
+    color: var(--cor-secundaria);
 }
 
 /* FORMAÇÃO ACADEMICA*/
@@ -172,24 +197,311 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #EAF2FD;
-    gap: 15px;
-    min-height: 600px;
+    background-color: var(--cor-terciaria);
+    gap: 20px;
+    min-height: var(--altura-padrao-containers);
 }
 
 .formacao-curso .formacao {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 80%;
+    width: var(--tamanho-padrao);
+}
+
+.container_formacao {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .formacao-curso .formacao .item {
+    display: flex;
     width: 300px;
-    height: 300px;
-    background-color: #fff;
+    height: 270px;
+    background-color: var(--cor-branco);
     border-radius: 10px;
     padding: 5px;
+    justify-content: center;
+    align-items: center;
+
 }
+
+.formacao-curso .formacao .item img {
+    width: 200px;
+    height: 200px;
+}
+.reverso_celular {
+    display: none;
+}
+
+
+/* EXPERIENCIA */
+
+.experiencia {
+    max-width: var(--tamanho-padrao);
+    min-height: var(--altura-padrao-containers);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 40px 0 40px 0;
+}
+.experiencia .projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.experiencia .projetos .img_projeto a img {
+    width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.experiencia .projetos .link_projetos {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.container_btn {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0 15px 0;
+}
+.btn {
+    border-radius: 8px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-background);
+    padding: 8px;
+}
+
+.btn:hover {
+    background-color: var(--cor-secundaria-hover); 
+}
+
+/* CONTATO */
+
+.contato {
+    display: flex;
+    background-color: var(--cor-terciaria);
+    min-height: var(--altura-padrao-containers);
+    align-items: center;
+    justify-content: center;
+}
+
+.contato .container_contato {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--tamanho-padrao);
+    padding: 20px;
+}
+
+.contato .container_contato .box_contato {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contato .container_contato .nome {
+    background-color: var(--cor-branco);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#item {
+    color: var(--cor-principal);
+    font-size: .8rem;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea {
+    margin-top: 20px;
+}
+
+#btn_enviar {
+    border: none;
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+}
+
+
+
+
+/* FOOTER */
+footer {
+   display: flex;
+   height: 50px;
+   background-color: var(--cor-branco);
+   align-items: center;
+   justify-content: center;
+}
+footer p {
+    font-size: .7rem;
+    text-align: center;
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    header {
+        padding: 15px 0;
+    }
+    
+    .logo h2 {
+        font-size: .6rem;
+        gap: 8px;
+    }
+
+    .menu ul {
+        gap: 15px;
+        font-size: .6rem;
+    }
+   
+    /* HERO */
+
+    .sobre-mim .hero {
+       
+        min-height: var(--altura-padrao-tablet);
+    }
+
+    .sobre-mim .sobre-txt {
+        height: var(--altura-padrao-tablet);
+    }
+    
+    .sobre-mim .hero .texto .txt {
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    
+    .sobre-mim .hero .texto p {
+        font-size: 15px;
+    }
+    
+    .sobre-mim .hero .imagem img{
+        width: 200px;
+        height: 200px;
+    }
+
+    /* FORMAÇÃO */
+    .formacao-curso {
+        min-height: var(--altura-padrao-tablet);
+    }
+    .formacao-curso h2 {
+        margin: 20px;
+       
+    }
+    .container_formacao {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .formacao-curso .formacao .item {
+        width: 180px;
+        height: 120px; 
+    }
+    
+    .formacao-curso .formacao .item img {
+        width: 100px;
+        height: 100px;
+    }
+    .formacao-curso .formacao .container_formacao h3 {
+        font-size: .8rem;
+    }
+
+    /* EXPERIENCIA */
+
+    .experiencia .projetos .img_projeto a img {
+        width: 400px;
+    }
+
+    .container_btn .btn {
+        font-size: .8rem;
+    }
+
+    /* CONTATO */
+    .luttie {
+        display: none;
+    }
+    #item {
+        font-size: .7rem;
+    }
+    .box_contato {
+        margin: 0 auto;
+    }
+    
+  }
+
+@media (max-width: 490px) {
+   .logo h2 {
+    font-size: .5rem;
+   }
+   .menu ul {
+    display: none;
+   }
+   .menu .ul_celular {
+    display: block;
+   }
+   .sobre-mim {
+    min-height: var(--altura-padrao-celular);
+   }
+   .sobre-mim .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: start;
+   }
+   .sobre-mim .hero .texto .txt{
+    font-size: 1rem;
+   }
+   .sobre-mim .hero .texto p{
+    font-size: .8rem;
+   }
+   .sobre-mim .hero .texto .redes{
+    font-size: .8rem;
+    gap: 5px;
+   }
+   .sobre-mim .hero .imagem img{
+    width: 100px;
+    height: 100px;
+   }
+   .sobre {
+    min-height: var(--altura-padrao-celular);
+   }
+
+   .experiencia .projetos .img_projeto a img {
+    width: 300px;
+    }
+    .container_btn .btn {
+        font-size: .8rem;
+    }
+    .projetos {
+        display: flex;
+        flex-direction: column;
+    }
+    .reverso_descktop {
+        display: none;
+    }
+    .reverso_celular {
+        display: block;
+    }
+    
+  }
+
+  
+

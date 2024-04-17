@@ -14,6 +14,7 @@
     <header>
         <div class="logo">
             <h2 class="nome"><i class="ri-bard-line"></i>Willian Gomes</h2>
+        
         </div>
         <nav class="menu">
             <ul>
@@ -22,6 +23,9 @@
                 <li><a href="#">Hobies</a></li>
                 <li><a href="#">Formação</a></li>
                 <li><a href="#">Projetos</a></li>
+                <li><a href="#"><b>williangomes949@gmail.com</b></a></li>
+            </ul>
+            <ul class="ul_celular">
                 <li><a href="#"><b>williangomes949@gmail.com</b></a></li>
             </ul>
         </nav>
@@ -65,7 +69,7 @@
                 <div class="item"><i class="ri-reactjs-line"></i><h4>React</h4></div>
             </div>
             <h2>Hobies</h2>
-            <div class="skills hobies">
+            <div class="skills">
                 <div class="item"><i class="ri-gamepad-fill"></i><h4>Video Games</h4></div>
                 <div class="item"><i class="ri-film-fill"></i><h4>Filmes/Series</h4></div>
                 <div class="item"><i class="ri-guide-fill"></i></i><h4>Eletronica</h4></div>
@@ -75,22 +79,112 @@
             </div>
         </section>
         <section class="formacao-curso">
-            <h2>Formação</h2>
+            <h2>Formação acadêmica</h2>
             <div class="formacao">
-                <div class="item">1</div>
-                <div class="item">2</div>
-                <div class="item">2</div>
+                <div class="container_formacao">
+                    <div class="item"><img src="assets/logo-alura.svg" alt="logo-alura"></div>
+                    <h3>Desenvolvedor Front-End</h3>
+                    <p>2024</p>
+                </div>
+                <div class="container_formacao">
+                    <div class="item"><img src="assets/escola_virtual_horizontal_full.svg" alt=""></div>
+                    <h3>HTML, CSS e Javascript</h3>
+                    <p>2023</p>
+                </div>
+                <div class="container_formacao">
+                    <div class="item"><img src="assets/rocketseat-logo.svg" alt=""></div>
+                    <h3>NLW Expert - Front-End</h3>
+                    <p>2024</p>
+                </div>
+                
             </div>
         </section>
         <section class="experiencia">
-            <div class="projetos"></div>
+            <div>
+                <div class="projetos">
+                    <div class="img_projeto"><a href="#"><img src="assets/Captura de tela 2024-04-17 100628.png" alt="imagem de link"></a>
+                    </div>
+                    <div class="link_projeto">
+                        <h3>Gerador de Imagens</h3>
+                        <p>Gerador de imagens com IA</p>
+                        <div class="container_btn">
+                            <a href="#"><p class="btn">Repositorio</p></a>
+                            <a href="#"><p class="btn">Ver Demo</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="reverso_descktop">
+                <div class="projetos">
+                    <div class="link_projeto">
+                        <h3>Gerador de Imagens</h3>
+                        <p>Gerador de imagens com IA</p>
+                        <div class="container_btn">
+                            <a href="#"><p class="btn">Repositorio</p></a>
+                            <a href="#"><p class="btn">Ver Demo</p></a>
+                        </div>
+                    </div>
+                    <div class="img_projeto"><a href="#"><img src="assets/Captura de tela 2024-04-17 100628.png" alt="imagem de link"></a>
+                    </div>
+                </div>
+            </div>    
+            <div>
+                <div class="projetos">
+                    <div class="img_projeto"><a href="#"><img src="assets/Captura de tela 2024-04-17 100628.png" alt="imagem de link"></a>
+                    </div>
+                    <div class="link_projeto">
+                        <h3>Gerador de Imagens</h3>
+                        <p>Gerador de imagens com IA</p>
+                        <div class="container_btn">
+                            <a href="#"><p class="btn">Repositorio</p></a>
+                            <a href="#"><p class="btn">Ver Demo</p></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>    
+            <div class="reverso_celular">
+                <div class="projetos">
+                    <div class="img_projeto"><a href="#"><img src="assets/Captura de tela 2024-04-17 100628.png" alt="imagem de link"></a>
+                    </div>
+                    <div class="link_projeto">
+                        <h3>Gerador de Imagens</h3>
+                        <p>Gerador de imagens com IA</p>
+                        <div class="container_btn">
+                            <a href="#"><p class="btn">Repositorio</p></a>
+                            <a href="#"><p class="btn">Ver Demo</p></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>    
         </section>
         <section class="contato">
-            <form action="contato"></form>
+            <div class="container_contato">
+                <div class="luttie">
+                    <lottie-player src="assets/Animation - 1713365666460 (1).json" background="transparent" speed="1" loop="true" autoplay="true" style="max-width: 350px; max-height: 350px; border-radius: 50%; overflow: hidden;"></lottie-player>
+                </div>
+                <div class="box_contato">
+                    <h3>Contato</h3>
+                    <p>Quer entrar em contato comigo? <br> Preencha o formulário e entrarei em contato o mais rápido posível.
+                    </p>
+                    <form action="form_cont">
+                        <label id="item" for="fname">Nome</label><br>
+                        <input type="text" id="item" name="fname"><br>
+                        <label id="item" for="mail">E-mail</label><br>
+                        <input type="email" id="item" name="mail"><br><br>
+                        <input type="text" id="item" name="assunto" placeholder="Assunto"><br>
+                        <textarea name="msg" id="item" cols="30" rows="10">Mensagem</textarea><br>
+                        <input class="btn" id="btn_enviar" type="submit">
+                    </form>
+                </div> 
+            </div>
         </section>
     </main>
     <footer>
+        <p>Desenvolvido por | Willian Gomes - 2024</p>
     </footer>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>
