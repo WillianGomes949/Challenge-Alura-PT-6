@@ -2,15 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.querySelector("form");
     const nameInput = document.querySelector("input[name='fname']");
     const emailInput = document.querySelector("input[name='mail']");
-    const subjectInput = document.querySelector("input[name='assunto']");
     const messageInput = document.querySelector("textarea[name='msg']");
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
         // Valide o nome (obrigatório)
-        if (nameInput.value.trim() === "") {
+        const nome = nameInput.value.trim();
+
+        if (nome === "") {
             alert("Por favor, insira seu nome.");
+            nameInput.focus();
+            return;
+        }
+
+        if (nome.length > 50) {
+            alert("O nome deve ter no máximo 50 caracteres.");
             nameInput.focus();
             return;
         }
@@ -22,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             emailInput.focus();
             return;
         }
+
         // Assunto é Opcional
 
         // Valide a mensagem (obrigatória)
