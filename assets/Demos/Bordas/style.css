@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #000;
+    color: #fff;
+    gap: 30px;
+    padding: 5px;
+    
+}
+
+.animated_card_1, 
+.animated_card_2,
+.animated_card_3 {
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: 250px;
+    width: 150px;
+    background: #222;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+span {
+    color: rgba(254, 254, 254, 0.1);
+    font-size: 5rem;
+    z-index: 10;
+    transition: all 0.1s ease;
+}
+
+span:hover {
+    font-size: 6rem;
+}
+
+/* first border animation*/
+
+.animated_card_1::before {
+    position: absolute;
+    content: '';
+    height: 250px;
+    width: 150px;
+    background: tomato;
+    border-radius: 10px;
+    z-index: -1;
+    transition: 0.3s;
+    animation: animate 2s linear infinite;
+}
+
+.animated_card_1:hover::before {
+    height: 260px;
+    width: 160px;
+}
+
+@keyframes animate {
+    50% {
+        filter: hue-rotate(350deg);
+    }
+}
+/* Second border animation*/
+
+.animated_card_2::before {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 180%;
+    background: rgba(254, 254, 254, 0.1);
+    transform: rotate(45deg);
+}
+
+.animated_card_2 {
+    overflow: hidden;
+}
+
+.animated_card_2:hover::before {
+    background: tomato;
+    animation: animate_2 2s linear infinite;
+}
+
+@keyframes animate_2{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    50% {
+        filter: hue-rotate(350deg);
+    }
+}
+
+.animated_card_2::after {
+    position: absolute;
+    content: '';
+    inset: 5px;
+    background: #222;
+    border-radius: 10px;
+}
+
+
+/* third border animation*/
+
+.animated_card_3 {
+    overflow: hidden;
+}
+
+.animated_card_3::before {
+    position: absolute;
+    content: '';
+    height: 50%;
+    width: 180%;
+    background: #5c5c5c;
+    transform: rotate(-45deg);
+    filter: blur(20px);
+}
+
+.animated_card_3:hover::before {
+    background: #f50a02;
+    animation: animate_3 2.5s linear infinite;
+    
+}
+
+@keyframes animate_3 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+        filter: blur(35px) hue-rotate(-360deg) saturate(100%) ;
+    }
+}
+
+.animated_card_3::after {
+    position: absolute;
+    content: '';
+    inset: 5px;
+    background: #252525;
+    border-radius: 10px;
+}

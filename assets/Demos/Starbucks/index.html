@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks | Website Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="assets/images/logo.png"  alt="Logo-Starbucks"></a>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>Isto não é apenas café<br><span>isto é</span> Starbucks</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, quo totam? Illum eaque inventore laborum necessitatibus veritatis ab totam repellendus neque accusantium? Voluptate nam accusantium sequi quos quidem amet eveniet?</p>
+                <a href="#">Leia Mais</a>
+            </div>
+            <div class="imgBox">
+                <img src="assets/images/img1.png" class="starbucks" alt="Copo-de-café">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="assets/images/thumb1.png" onclick="imgSlider('assets/images/img1.png');changerCircleColor('#017143')" ></li>
+            <li><img src="assets/images/thumb2.png" onclick="imgSlider('assets/images/img2.png');changerCircleColor('#eb7495')" ></li>
+            <li><img src="assets/images/thumb3.png" onclick="imgSlider('assets/images/img3.png');changerCircleColor('#d752b1')" ></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="assets/images/instagram.png"></a></li>
+            <li><a href="#"><img src="assets/images/facebook.png"></a></li>
+            <li><a href="#"><img src="assets/images/twitter.png" ></a></li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

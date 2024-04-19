@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile.css">
+    <title>Gerador de Imagens</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Gerador de Imagens com IA</h1>
+        <p>Escreva seu Prompt para gerar imagens com o poder da Inteligência Artificial.<br><br>Exemplo:<br>A imagem apresenta um homem mais velho, com longa barba e bigode brancos. Ele tem uma expressão severa, dando a impressão de um indivíduo sábio e experiente. A barba e o bigode do homem são proeminentes, aumentando sua aparência distinta. O close-up do rosto do homem enfatiza seus traços faciais e a intensidade de seu olhar.</p>
+        <form class="gen-form">
+
+            <input type="text" id="user-prompt-1" placeholder="Digite aqui seu prompt..." autocomplete="off">
+
+            <input type="text" id="user-prompt" placeholder="" autocomplete="off">
+            <button type="button" id="generate">Gerar</button>
+        </form>
+        <div class="result">
+            <div id="loading">Gerando...</div>
+            <div id="image-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

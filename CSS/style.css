@@ -252,6 +252,12 @@ header {
     margin: 0 auto;
     padding: 40px 0 40px 0;
 }
+
+.experiencia h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .experiencia .projetos {
     display: flex;
     justify-content: center;
@@ -354,6 +360,29 @@ footer p {
 }
 
 
+/* BOTÃO FLUTUANTE */
+
+.btn_top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(70, 70, 70, .3);
+    text-decoration: none;
+    border-radius: 50%;
+    color: var(--cor-background);
+}
+.btn_top::after {
+    transition: margin-top 250ms;
+}
+.btn_top:hover {
+    border-radius: 50%;
+}
+
 /* MEDIA QUERY */
 
 @media (max-width: 768px) {
@@ -449,6 +478,10 @@ footer p {
   }
 
 @media (max-width: 490px) {
+
+   .sobre-mim .hero {
+    justify-content: center;
+   }
    .logo h2 {
     font-size: .5rem;
    }
@@ -501,7 +534,4 @@ footer p {
         display: block;
     }
     
-  }
-
-  
-
+}
